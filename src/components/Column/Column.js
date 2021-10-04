@@ -6,41 +6,44 @@ import Creator from '../Creator/Creator';
 import Icon from '../Icon/Icon';
 import { settings } from '../../data/dataStore';
 
+Column.propTypes = {
+  icon: PropTypes.node,
+};
 class Column extends React.Component {
     static propTypes = {
-        title: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     }
 
     addCard(title){
-        this.setState(state => (
+      this.setState(state => (
         {
-            cards: [
+          cards: [
             ...state.cards,
             {
-                key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-                title,
-            }
-            ]
+              key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+              title,
+            },
+          ],
         }
-        ));
-        }
+      ));
+    }
     render(){
-        return(
+      return(
         <section className = {styles.component}>
-            <h3 className={styles.title}>
-                <span>
-                    <Icon name={this.props.icon}/>
-                </span>
-                {this.props.title}
-            </h3>
-        <div className={styles.creator}>
+          <h3 className={styles.title}>
+            <span>
+              <Icon name={this.props.icon}/>
+            </span>
+            {this.props.title}
+          </h3>
+          <div className={styles.creator}>
             <Card text={settings.cardCreatorText} action={title => this.addCard(title)}/>
-        </div>
-        <div className={styles.creator}>
+          </div>
+          <div className={styles.creator}>
             <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
-        </div>
+          </div>
         </section>
-        );
+      );
     }
 }
 

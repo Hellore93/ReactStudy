@@ -7,12 +7,12 @@ import {pageContents, listData} from '../../data/dataStore.js';
 class App extends React.Component {
   render() {
     return (
-        <main className = {styles.component}>
-          <h1 className={styles.title}>{pageContents.title}</h1>
-          <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-          <List {...listData} img='http://uploads.kodilla.com/bootcamp/fer/11.react/space.png' />
-        </main>
-    )
+      <main className = {styles.component}>
+        <h1 className={styles.title}>{pageContents.title}</h1>
+        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+        <List {...listData} img='http://uploads.kodilla.com/bootcamp/fer/11.react/space.png' />
+      </main>
+    );
   }
 }
 export default App;
