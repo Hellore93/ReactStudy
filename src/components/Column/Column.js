@@ -18,20 +18,20 @@ class Column extends React.Component {
     render(){
       const {title, icon, cards, addCards} = this.props;
       return(
-        <section className = {styles.cmponent}>
+        <section className = {styles.component}>
           <h3 className={styles.title}>
             <span>
               <Icon name={icon}/>
             </span>
             {title}
           </h3>
+          <div className={styles.creator}>
+            <Creator text={settings.cardCreatorText} action={addCards}/>
+          </div>
           <div className={styles.cards}>
             {cards.map(cardData => (
               <Card key={cardData.id} {...cardData} />
             ))}
-          </div>
-          <div className={styles.creator}>
-            <Creator text={settings.cardCreatorText} action={addCards}/>
           </div>
         </section>
       );
