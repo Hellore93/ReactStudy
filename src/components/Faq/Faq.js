@@ -2,9 +2,9 @@ import React from 'react';
 import Container from '../Container/Container';
 import PropTypes from 'prop-types';
 import Hero from '../Hero/Hero';
-import { infoData } from '../../data/dataStore';
+import { faqData } from '../../data/dataStore';
 
-class Info extends React.Component {
+class Faq extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
@@ -12,13 +12,13 @@ class Info extends React.Component {
   }
 
   render(){
-    return(
+    return (
       <Container>
-        <Hero titleText = {infoData.title} image = {infoData.image}/>
-        <p>{infoData.description}</p>
+        <Hero titleText={faqData.title} image={faqData.image} />
+        <p>{ faqData.description }</p>
       </Container>
     );
   }
 }
 
-export default Info;
+export default Faq;

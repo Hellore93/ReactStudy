@@ -10,6 +10,9 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  header: {
+    icon: '',
+  },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -72,6 +75,18 @@ export const listData = {
   ],
 };
 
+export const infoData = {
+  title: 'Info',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
+export const faqData = {
+  title: 'FAQ',
+  description: 'What is this app for? How to use this application? How to navigate on this page? How to add another line?',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
 const lists = [
   {
     id: 'list-1',
@@ -79,6 +94,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>soon!</sup>',
+    description: 'Interesting things I want to check out!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Things to do <sup>soon!</sup>',
+    description: 'Interesting things I want to check out!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },  
 ];
 
 const columns = [
