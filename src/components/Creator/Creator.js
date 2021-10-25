@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Creator.scss';
-import Button from '../Button/Button.js';
+import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
@@ -18,7 +19,6 @@ class Creator extends React.Component {
   }
 
   handleChange = event => {
-    // console.log(event);
     this.setState({
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
